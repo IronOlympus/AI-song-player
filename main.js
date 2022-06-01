@@ -1,5 +1,7 @@
 var leftwristy;
 var rightwristy;
+var harrypotter = "no";
+var peterpan  = "no";
 function setup(){
     canvas = createCanvas(350, 325);
     canvas.position(465,250);
@@ -30,9 +32,15 @@ function check(){
     if(rightwristy > 320){
         harrypottersong.play();
         peterpansong.stop();
+        harrypotter = "yes";
+        peterpan = "no";
+        document.getElementById("heading2").innerHTML = "Harry Potter Song";
     }
     if(leftwristy > 320){
         peterpansong.play();
         harrypottersong.stop();
+        document.getElementById("heading2").innerHTML = "Peter Pan Song";
+        peterpan = "yes";
+        harrypotter = "no";
     }
 }
