@@ -30,15 +30,17 @@ function modelLoaded(){
 }
 function check(){
     if(rightwristy > 320){
-        harrypottersong.play();
+        harrypottersong.stop();
         peterpansong.stop();
+        harrypottersong.play();
         harrypotter = "yes";
         peterpan = "no";
         document.getElementById("heading2").innerHTML = "Harry Potter Song";
     }
     if(leftwristy > 320){
-        peterpansong.play();
+        peterpansong.stop();
         harrypottersong.stop();
+        peterpansong.play();
         document.getElementById("heading2").innerHTML = "Peter Pan Song";
         peterpan = "yes";
         harrypotter = "no";
